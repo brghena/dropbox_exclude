@@ -9,7 +9,7 @@
 ################
 
 # root of dropbox
-dropbox_root = '/home/brghena/Dropbox/scratch'
+dropbox_root = '/home/brghena/Dropbox/'
 
 # folders to be excluded from dropbox
 exclude_dirs = ['node_modules', 'build', '_build', 'bower_components']
@@ -116,7 +116,7 @@ def remove_from_dropbox (file_path):
         exit(1)
 
     # wait for dropbox to sync
-    print("\tWaiting for sync")
+    print("\tWaiting for sync (" + time.strftime("%H:%M:%S") + ")")
     dropbox_sync(file_path)
 
     # exclude file from dropbox
